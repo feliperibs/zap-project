@@ -1,0 +1,21 @@
+.viva-box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.house-box {
+    display: inline-block;
+    height: 600px;
+    background-color: #000;
+    margin: 0;
+    margin-left: 8px;
+    width: 24%;
+    padding: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    .house-box {
+        width: 90%;
+    }
+}

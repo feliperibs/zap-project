@@ -1,0 +1,9 @@
+{
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+        "entryFile": "src/zap-project/index.ts"
+    },
+    "whitelistedNonPeerDependencies": ["."],
+    "keepLifecycleScripts": true,
+    "deleteDestPath": true
+}
