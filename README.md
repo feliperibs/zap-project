@@ -17,7 +17,7 @@ npm start
 
 Após isso, abra seu navegador na url http://localhost:4200. É onde a aplicação está sendo rodada.
 
-# Testes
+## Testes
 
 Para os testes unitários execute:
 
@@ -25,7 +25,7 @@ Para os testes unitários execute:
 npm run test
 ```
 
-# Build
+## Build
 
 Para realizar o build do projeto e gerar seu .dist para o deploy, rode:
 
