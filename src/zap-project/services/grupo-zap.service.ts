@@ -45,7 +45,7 @@ export class GrupoZapService {
 
             return false;
         } else {
-            if (house.pricingInfos.businessType === 'RENT' && this.price >= 3500) return true;
+            if (house.pricingInfos.businessType === 'RENTAL' && this.price >= 3500) return true;
         }
 
         return false;

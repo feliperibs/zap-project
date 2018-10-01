@@ -1,7 +1,7 @@
 import { Injector } from '@angular/core';
 import { UIRouter, UIView } from '@uirouter/angular';
 
-import { ZapProjectComponent } from '../zap-project/zap-project.component';
+import { ZapProjectComponent } from './zap-project.component';
 
 export const INITIAL_STATES = [
     {

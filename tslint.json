@@ -106,16 +106,7 @@
         "no-require-imports": false,
         "no-var-requires": false,
         "use-view-encapsulation": false,
-        "function-name": [
-            true,
-            {
-                "method-regex": "^[a-z][\\w\\d]+$",
-                "private-method-regex": "^[a-z][\\w\\d]+$",
-                "protected-method-regex": "^[a-z][\\w\\d]+$",
-                "static-method-regex": "^([A-Z_\\d]+|forRoot|forChild)$",
-                "function-regex": "^[a-z][\\w\\d]+$"
-            }
-        ],
+        "function-name": false,
         "mocha-no-side-effect-code": false,
         "no-backbone-get-set-outside-model": false
     }

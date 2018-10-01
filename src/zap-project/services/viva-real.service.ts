@@ -37,7 +37,7 @@ export class VivaRealService {
     }
 
     private realPricingRules(house: HouseInput): boolean {
-        if (house.pricingInfos.businessType === 'RENT') {
+        if (house.pricingInfos.businessType === 'RENTAL') {
             const finalPrice = this.validate.isInBoundingBox(this.location) ? this.price * 1.5 : this.price;
 
             if (finalPrice >= 4000) return true;

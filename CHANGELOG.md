@@ -4,4 +4,4 @@
 
 ### Novidades
 
-- Criação da aplicação
+- Criação do Projeto

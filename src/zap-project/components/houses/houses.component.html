@@ -1,0 +1,56 @@
+<div class="bg-white container-fluid viva-box"
+    *ngIf="houses">
+    <div *ngFor="let house of houses | paginate: { itemsPerPage: 20,currentPage: page,totalItems: totalItems }"
+        class="house-box">
+        <ngb-carousel>
+            <ng-template ngbSlide
+                *ngFor="let image of house.images">
+                <img [src]="image">
+            </ng-template>
+        </ngb-carousel>
+        <div class="info-box text-center mt-1">
+            <h4>Casa Para {{house.pricingInfos.businessType | translate}}</h4>
+            <p class="font-weight-light">{{house.bedrooms}} quartos | {{house.bathroomd}} banheiros | {{house.usableAreas}}m² | {{house.parkingSpaces}} vagas</p>
+            <p class="font-weight-normal">Valor: {{house.pricingInfos.price | currency:'BRL':symbol:'1.2-2'}}</p>
+            <a href="#"
+                (click)="openModal(content)"><u>Ver Mais</u></a>
+        </div>
+
+        <ng-template #content
+            let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title">Casa Para {{house.pricingInfos.businessType | translate}}</h4>
+                <button type="button"
+                    class="close"
+                    aria-label="Close"
+                    (click)="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <ngb-carousel>
+                    <ng-template ngbSlide
+                        *ngFor="let image of house.images">
+                        <img [src]="image">
+                    </ng-template>
+                </ngb-carousel>
+                <div class="mt-1">
+                    <p class="font-weight-light">{{house.bedrooms}} quartos | {{house.bathroomd}} banheiros | {{house.usableAreas}}m² | {{house.parkingSpaces}} vagas</p>
+                    <p class="font-weight-light">{{house.address.city}} - {{house.address.neighborhood}} - {{house.listingType | translate}} </p>
+                    <p class="font-weight-normal">Valor: {{house.pricingInfos.price | currency:'BRL':symbol:'1.2-2'}}</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button"
+                    class="btn btn-light"
+                    (click)="closeModal()">Fechar</button>
+            </div>
+        </ng-template>
+    </div>
+    <div class="text-center mt-2">
+        <pagination-controls (pageChange)="page = $event"
+            previousLabel="Anterior"
+            nextLabel="Próximo"></pagination-controls>
+    </div>
+
+</div>

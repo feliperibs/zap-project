@@ -1,5 +1,4 @@
 import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
-import { InputService } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 import { ValidationService } from './validation.service';
